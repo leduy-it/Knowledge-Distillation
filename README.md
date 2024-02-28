@@ -1,6 +1,6 @@
 # Knowledge-Distillation
 
-### Tổng quan
+## Tổng quan
   - Knowledge Distillation (KD) là một kỹ thuật trong lĩnh vực học máy và trí tuệ nhân tạo, nhằm mục đích chuyển giao kiến thức từ một mô hình lớn (teacher model) sang một mô hình nhỏ hơn (student model)
   - Mục tiêu của kỹ thuật này là tạo ra một mô hình nhỏ gọn hơn có khả năng thực hiện các nhiệm vụ tương tự như mô hình lớn, nhưng với hiệu suất tính toán thấp hơn như trong các thiết bị di động hoặc các hệ thống nhúng, tối ưu hóa việc sử dụng tài nguyên và tăng khả năng triển khai mô hình trong các ứng dụng thực tế như xe không người lái, hệ thống giao thông thông minh,...
 ### Ý tưởng:
@@ -25,3 +25,9 @@
 
 ![Screenshot 2024-02-28 at 22 19 55](https://github.com/leduy-it/Knowledge-Distillation/assets/85160629/30807e5b-6cdc-4501-9c4b-a720780a7b2e)
 
+---------
+## Các cơ chế Knowledge Distillation
+Trong Knowledge Distillation có hai cơ chế chính Feature-based và Logit-based:
+- ** Feature-based Knowledge Distillation: **Được mô tả trong Hình 3a, kiến thức được chuyển giao từ teacher model sang student model thông qua các đặc trưng (features) mà teacher model học được. Mục tiêu là làm cho các đặc trưng của student model tương tự như teacher model, thông qua việc giảm thiểu sự khác biệt giữa các đặc trưng của hai mô hình nhờ vào Distillation Loss. Điều này có thể bao gồm việc so sánh các feature maps hoặc các intermediate layers giữa hai mô hình. Phương pháp này giúp student model không chỉ học cách dự đoán đầu ra mà còn học cách trích xuất và xử lý thông tin giống như teacher model.
+- ** Logit-based Knowledge Distillation: **: Phương pháp này tập trung vào việc chuyển giao kiến thức từ các logits như được minh họa trong Hình 3b. Logits thường chứa thông tin ngữ nghĩa cao vì chúng bảo toàn nhiều thông tin về mức độ tự tin và mối quan hệ giữa các lớp của đầu ra. Mục tiêu là làm cho logits của student model gần với logits của teacher model nhất có thể. Điều này thường được thực hiện bằng cách giảm thiểu sự khác biệt (ví dụ qua hàm loss như KL divergence ) giữa logits của hai mô hình.
+![Screenshot 2024-02-28 at 22 45 54](https://github.com/leduy-it/Knowledge-Distillation/assets/85160629/02b9c727-ab2c-4f40-b37d-ba033f683d4c)
