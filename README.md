@@ -7,3 +7,17 @@
 <p> Như trong Hình. 1 thông tin được chuyển từ teacher model sang student model thông qua quá trình huấn luyện. Student model không chỉ học từ dữ liệu đánh nhãn mà còn học cách mô phỏng cách mà teacher model đưa ra dự đoán. Điều này thường được thực hiện bằng cách sử dụng đầu ra của teacher model (ví dụ, xác suất dự đoán (logits) của các lớp) làm mục tiêu “mềm” trong quá trình huấn luyện của student model thông qua Distillation Loss như trong phương trình 1 và 2. </p>
 
 ![distillation](https://github.com/leduy-it/Knowledge-Distillation/assets/85160629/2d23be51-aa12-4b4f-8181-aafbf8c9615f)
+
+---
+## So sánh Transfer learning và Knowledge Distillation
+
+#### Bảng 1: So sánh giữa Transfer Learning và Knowledge Distillation 
+|       Tiêu chí       |      Transfer learning        | Knowledge Distillation     |
+| :------------:|:-------------:|:-----:|
+|    Mục đích như trong Hình. 2          |      Chuyển giao kiến thức (copy weights) từ mô hình đào tạo sẵn        |  Chuyển giao kiến thức từ mô hình lớn sang mô hình nhỏ   |
+|     Mô hình nguồn         |     Mô hình được huấn luyện trước    |  Mô hình lớn (teacher model)   |
+|    Mô hình đích         | Mô hình mới cần được tinh chỉnh           |    Mô hình nhỏ hơn (student model)  |
+| Phương pháp | Tinh chỉnh các lớp của mô hình | Sử dụng đầu ra của mô hình teacher để huấn luyện mô hình student |
+| Ứng dụng | NLP, Computer Vision, v.v. | Nén mô hình, tăng hiệu suất |
+![Screenshot 2024-02-28 at 22 19 55](https://github.com/leduy-it/Knowledge-Distillation/assets/85160629/30807e5b-6cdc-4501-9c4b-a720780a7b2e)
+
