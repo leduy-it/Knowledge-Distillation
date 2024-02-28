@@ -18,6 +18,10 @@
 |     Mô hình nguồn         |     Mô hình được huấn luyện trước    |  Mô hình lớn (teacher model)   |
 |    Mô hình đích         | Mô hình mới cần được tinh chỉnh           |    Mô hình nhỏ hơn (student model)  |
 | Phương pháp | Tinh chỉnh các lớp của mô hình | Sử dụng đầu ra của mô hình teacher để huấn luyện mô hình student |
-| Ứng dụng | NLP, Computer Vision, v.v. | Nén mô hình, tăng hiệu suất | |
+| Ứng dụng | NLP, Computer Vision, v.v. | Nén mô hình, tăng hiệu suất | 
+
+---
+#### Hình 2: Sự khác biệt về kiến trúc giữa Transfer Learning và Knowledge Distillation
+
 ![Screenshot 2024-02-28 at 22 19 55](https://github.com/leduy-it/Knowledge-Distillation/assets/85160629/30807e5b-6cdc-4501-9c4b-a720780a7b2e)
 
